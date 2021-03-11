@@ -13,7 +13,7 @@ The only significant difference between the two was having to implement a utilit
 
 ![Source: Wikipedia](https://i.imgur.com/i2FueCI.png)
 
-Source: Wikipedia
+*Source: Wikipedia*
 
 This means that the white side would want to keep the number as small as possible by making sure it’s piece count total is greater and blacks piece count total is smaller and black would want vice versa. Although this AI is considerably better than the GenericAI that randomly moves, it is now able to take trades and defend it’s pieces. Unfortunately though, due to how simple I made the utility function that’s all it’s able to do. It doesn’t have tactics, it doesn’t know how to control the center and it does a lot of wasted moves. Instead of trying to move pawns forward, it’ll move the rook back and forth. The AI plays quite reactively instead of proactively. 
 
