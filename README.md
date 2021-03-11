@@ -4,10 +4,6 @@
 
 The MonteCarlo Algorithm needs training so feel free to run it to update the database :)
 
-Kabilan Thangarajah
-A00986030
-March 1st, 2021
-Assignment 1
 Minimax
 The MiniMax AI I implemented was very similar to the one we used for TicTacToe.
 The only significant difference between the two was having to implement a utility function that wasn’t “WIN” or “LOSE” since the amount of depth it would take to reach those states would take way too long compared to TicTacToe that no human would be able to sit patiently to wait for it. So, I created a utility function that weighed the total value of all the pieces on each side and subtracted whites pieces from black. The image below shows the weights for each piece. The king is 39 as it’s 1 more than all the pieces combined.
