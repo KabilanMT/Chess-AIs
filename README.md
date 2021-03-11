@@ -10,6 +10,7 @@ It randomly selects moves from all possible moves it has.
 ## Minimax
 The MiniMax AI I implemented was very similar to the one the one commonly used for TicTacToe.
 The only significant difference between the two was having to implement a utility function that wasn’t “WIN” or “LOSE” since the amount of depth it would take to reach those states would take way too long compared to TicTacToe that no human would be able to sit patiently to wait for it. So, I created a utility function that weighed the total value of all the pieces on each side and subtracted whites pieces from black. The image below shows the weights for each piece. The king is 39 as it’s 1 more than all the pieces combined.
+
 ![Source: Wikipedia](https://i.imgur.com/i2FueCI.png)
 
 Source: Wikipedia
@@ -27,13 +28,6 @@ The Monte Carlo Tree Search Algorithm AI took me the longest amount of time to i
 
 I only track the data of moves and add them to the database when the AI is training against itself (MCTSAI vs MCTSAI). If it’s not, I don’t track any of the data of the games. When the AI is training by playing against itself, I had it always explore instead of choosing moves that it already knew. It wouldn’t care about which moves won and lost and would just randomly choose. That way, I would have a larger database of moves. However, when it’s playing against a player, it will prioritise moves that exist in the database that have a high chance to win. This is done with my score function. For example, for white I add up the values of the total wins then subtract it by the losses and ties. Then divide that by the total amount of games to calculate the score. I subtract the ties for white and add the ties for black because generally black would play to tie since they’re playing from behind whereas white would have a higher chance of winning so they wouldn’t want to tie. If the moves score was above .5, then I would add it to a list of good moves. Then select the move with the highest chance to win. If no moves existed, then it’d choose a random move. I had the AI play against the Generic AI after 150 simulations and I found it to tie quite a lot. After 30 games, this was the result. Generally, the ties were favoured for MCTS, but it gave up its free pieces, forcing it to be tied as there were only two kings left.
 
-Wins
-Generic AI
-TIe
-MCTS
-3
-22
-5
-
+![Graph](https://i.imgur.com/rOsRE0b.png)
 
 This AI was still quite bad, even compared to the minimax one but that was due to how little data I had at the time when I played against it.
