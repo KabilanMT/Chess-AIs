@@ -1,5 +1,11 @@
 # Chess-AIs
-4 Different Chess AIs. Random, Minimax, Minimax + Iterative Deepening and Monte Carlo
+
+## 4 Different Chess AIs. 
+
+ * [Generic AI](#generic-ai)
+ * [Minimax](#minimax)
+ * [Minimax + Iterative Deepening](#iterative-deepening)
+ * [Monte Carlo](#monte-carlo-tree-search)
 
 
 The MonteCarlo Algorithm needs training so feel free to run it to update the database :)
