@@ -11,7 +11,7 @@
 The MonteCarlo Algorithm needs training so feel free to run it to update the database :)
 
 ## Generic AI
-It randomly selects moves from all possible moves it has.
+It randomly selects moves from all possible moves it has available.
 
 ## Minimax
 The MiniMax AI I implemented was very similar to the one the one commonly used for TicTacToe.
