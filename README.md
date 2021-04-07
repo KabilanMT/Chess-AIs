@@ -4,7 +4,7 @@
 
  * [Generic AI](#generic-ai)
  * [Minimax](#minimax)
- * [Minimax + Iterative Deepening](#iterative-deepening)
+ * [Minimax + Iterative Deepening](#minimax-with-iterative-deepening)
  * [Monte Carlo](#monte-carlo-tree-search)
 
 
@@ -24,7 +24,7 @@ The only significant difference between the two was having to implement a utilit
 This means that the white side would want to keep the number as small as possible by making sure it’s piece count total is greater and blacks piece count total is smaller and black would want vice versa. Although this AI is considerably better than the GenericAI that randomly moves, it is now able to take trades and defend it’s pieces. Unfortunately though, due to how simple I made the utility function that’s all it’s able to do. It doesn’t have tactics, it doesn’t know how to control the center and it does a lot of wasted moves. Instead of trying to move pawns forward, it’ll move the rook back and forth. The AI plays quite reactively instead of proactively. 
 
 
-## Iterative Deepening
+## Minimax with Iterative Deepening
 The Iterative Deepening AI is supposed to use Iterative Deepening to find the best move within a certain amount of time. Each time it calls a function with an ever increasing depth until it runs out of time. Once it runs out of time, it chooses the move with the most depth to use. For example, you simulate all the game states that black will have at depth 1 then depth 2 etc. Then find the best states for black at those depths. I implemented my Iterative Deepening AI with a combination of Minimax. I looked online and it seemed that it was a popular implementation to improve Minimax so I decided to go with that approach. Weirdly enough however, the implementation I found was actually worse than the base MiniMax function in the early game. I gave the AI 15 seconds to think, which unfortunately meant that if it had a lot of options for possible moves, it wouldn’t be able to reach the same amount of depth as the base minimax. However, when there were less possible moves, especially in late game it was able to go to depth 5 and even 7 consistently.
 
 ## Monte Carlo Tree Search
